@@ -6,14 +6,14 @@
         </script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-            crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous">-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="wetherApp.css">
     </head>
 
-    <body>
+    <body class="container-fluid">
                 <nav class="navbar">
             <ul>
                 <li>Change Page Background</li>
@@ -23,7 +23,7 @@
         <div class="container topMargin">
             <div class="row">
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel">
+                <div class="col-sm-3 well">
                     <h5>Temp <span class ="temp"></pan></h5>
                     <hr />
                     <p>Min: <span class="min"></span></p>
@@ -31,15 +31,15 @@
                     <p>Max: <span class="max"></span></p>
                     <hr /><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSjAhemSYjkekjKgbk0jkPfYJX5muWxu6I8qJhpykDlb-i2OG1rwg"
                         alt="..." class="img-circle">
-                    <h3>City,State</h3>
+                    <h3><span class = "city"></span>,<span class = "state"></span></h3>
                     <h4>Rain% : <span class = "rain"></span></h4>
                     <form>
-                    <input type="text" placeholder="Location" id="area">
+                    <input type="text" placeholder="Location" id="enterzip">
                     <button type="button" id="add">Add</button>
                     </form>
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel">
+                <div class="col-sm-3 well">
                     <h5>Temp.</h5>
                     <hr />
                     <p>Min:</p>
@@ -51,7 +51,7 @@
                     <h4>Rain% :</h4>
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel">
+                <div class="col-sm-3 well">
                     <h5>Temp.</h5>
                     <hr />
                     <p>Min:</p>
@@ -66,7 +66,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel">
+                <div class="col-sm-3 well">
                     <h5>Temp.</h5>
                     <hr />
                     <p>Min:</p>
@@ -78,7 +78,7 @@
                     <h4>Rain% :</h4>
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel">
+                <div class="col-sm-3 well">
                     <h5>Temp.<div></div></h5>
                     <hr />
                     <p>Min:</p>
@@ -90,7 +90,7 @@
                     <h4>Rain% :</h4>
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-3 panel button btn"><span class="glyphicon glyphicon-plus"></span></div>
+                <div class="col-sm-3 well button btn"><span class="glyphicon glyphicon-plus"></span></div>
 
             </div>
 

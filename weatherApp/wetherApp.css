@@ -1,31 +1,40 @@
+/*Controls the size of the well*/
 .well{
     background-color: lightblue;
     height: 300px;
     opacity: .7;
+    margin: 45px;
 }
-body {
+/*Is the back ground image on the page*/
+/*body {
    background-image: url(http://cdn.wallpapersafari.com/1/60/FZP4NQ.jpg); 
-}
+}*/
+/*P is the input I use to add half of my append information */
 p{
     font-size: 10;
     font-family: fantasy;
 }
+/*Removes the spacing in my page brakes*/
 hr{
     margin: 0px;
 }
-.glyphicon{
+/*The add button symbol I use*/
+.glf{
     padding: 100px 0px 0px 0px;
     font-size: 50px;
 }
+/*The size of the Imgs I added*/
 .img-circle{
     float: right;
     width: 60%;
     height: auto;
 }
+/*the body margin I use*/
 .topMargin{
     margin: 60px 0px 0px 0px;
 }
-ul{
+
+/*ul{
     list-style: none;
-}
+}*/
 

@@ -3,8 +3,8 @@ $(function () {
 
 
 
-    $("#add").click(function () {
-        var zipCode = $("#enterzip").val();
+    $("#add").click(function () { //the Id of the butto is connected to the click function 
+        var zipCode = $("#enterzip").val(); // the id of the form is connected to the zipCode variable  
         $.ajax("https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyAw239Po20l0xNQoX6PW4yjvnRMB4ddJp8").done(function (data) {
             var latitude = data.results[0].geometry.location.lat;
             var longitude = data.results[0].geometry.location.lng;
@@ -18,17 +18,18 @@ $(function () {
                 var rain = data.currently.precipProbability;
                 var min = data.daily.data[0].temperatureMin;
                 var max = data.daily.data[0].temperatureMax;
-                $("#populate").prepend("<div class = 'col-sm-3'> <h1>banna</h1> </div>");
-                $(".temp").append("<span>" + temp + "</span>");
-                $(".rain").append("<span>" + rain + "</span>");
-                $(".min").append("<span>" + min + "</span>");
-                $(".max").append("<span>" + max + "</span>");
-                $(".state").append("<span>" + state + "</span>");
-                $(".city").append("<span>" + city + "</span>");
+                var template = "<div class='col-sm-3 well'><h5>Temp.<span>" + temp +"<span></h5><hr /><p>Min:<span>" + min + "</span></p><hr /><p>Max:<span>" + max + "</span></p><hr /><h4><span>" + city + "," + state + "</span></h4><h4>Rain% :<span>" + rain + "</span></h4><span class = 'glyphicon glyphicon-remove' id = 'remove'></span></div>";
+                $("#populate").prepend(template);
+
             });
         });
     });
 });
+
+// $("#remove").click("#populate", function(ev){
+//     $(ev.target).parent().fadeOut();
+
+// });
 
 // I call this outside of the function so the information processes in order
 // var getInfo = function (lngLat) {

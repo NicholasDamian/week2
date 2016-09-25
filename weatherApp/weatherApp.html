@@ -26,22 +26,16 @@
 
             <!--Holds the first row-->                          
             <div class="row" id = "populate">    
-                                                                
-                <div class='col-sm-3 well'>
-                    <h5>Temp <span class ="temp"></pan></h5>
-                    <hr />
-                    <p>Min: <span class="min"></span></p>
-                    <hr />
-                    <p>Max: <span class="max"></span></p>
-                    <hr />
-                    <h3><span class = "city"></span>,<span class = "state"></span></h3>
-                    <h4>Rain% : <span class = "rain"></span></h4>
+                                <!--Button that decides where the next card will be-->                    
+                <div class= "col-sm-3 well">
                     <form> <!--If you wrap them in the form you don't have to link up the inputs-->
-                    <input type="text" placeholder="Location" id="enterzip">
-                    <span id="add" class="glyphicon glyphicon-plus"></span> <!--The id is used for a jQuery call-->
+                    <span id="add" class="glyphicon glyphicon-plus glf"></span> <!--The id is used for a jQuery call-->
+                    <input type="text" placeholder="Location" id="enterzip" class="pushRight" >
                     </form>
                 </div>
-                <!--"<div class="col-sm-3 well">
+
+                <!--BEFORE TEMP-->
+                <!--"<div class='col-sm-3 well'>
                     <h5>Temp.<span><span></h5>
                     <hr />
                     <p>Min:<span></span></p>
@@ -50,21 +44,11 @@
                     <hr />
                     <h3><span></span></h3>
                     <h4>Rain% :<span></span></h4>
-                </div>"-->
-                    <!--"<div class='col-sm-3 well'>
-                    <h5>Temp.<span>" + temp +"<span></h5>
-                    <hr />
-                    <p>Min:<span>" + min + "</span></p>
-                    <hr />
-                    <p>Max:<span>" + max + "</span></p>
-                    <hr />
-                    <h3><span>" + city + "," + state + "</span></h3>
-                    <h4>Rain% :<span>" + rain + "</span></h4>
+                    <span class = 'glyphicon glyphicon-remove' id = 'remove'></span>      not in after yet and commeted out in js
                 </div>"-->
 
-
-
-
+                <!--AFTER TEMP-->
+                    <!--"<div class='col-sm-3 well'><h5>Temp.<span>" + temp +"<span></h5><hr /><p>Min:<span>" + min + "</span></p><hr /><p>Max:<span>" + max + "</span></p><hr /><h4><span>" + city + "," + state + "</span></h4><h4>Rain% :<span>" + rain + "</span></h4></div>"-->
 
             </div>
         </div>

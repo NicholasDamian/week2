@@ -1,14 +1,14 @@
 /*Controls the size of the well*/
 .well{
     background-color: lightblue;
-    height: 300px;
+    height: 350px;
     opacity: .7;
-    margin: 45px;
+    margin: 30px;
 }
 /*Is the back ground image on the page*/
-/*body {
+body {
    background-image: url(http://cdn.wallpapersafari.com/1/60/FZP4NQ.jpg); 
-}*/
+}
 /*P is the input I use to add half of my append information */
 p{
     font-size: 10;
@@ -20,8 +20,8 @@ hr{
 }
 /*The add button symbol I use*/
 .glf{
-    padding: 100px 0px 0px 0px;
-    font-size: 50px;
+    padding: 85px 0px 70px 85px;
+    font-size: 100px;
 }
 /*The size of the Imgs I added*/
 .img-circle{
@@ -32,6 +32,10 @@ hr{
 /*the body margin I use*/
 .topMargin{
     margin: 60px 0px 0px 0px;
+}
+.pushRight{
+    /*padding: 0px 0px 0px 50px;*/
+    margin: 0px 0px 0px 50px;
 }
 
 /*ul{

@@ -14,35 +14,26 @@ $(function () {
             var darkSkyKey = "96f02ad95bc782facd7335190cb87a0a";
             $.ajax("https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat, { dataType: "jsonp" }).done(function (data) {
                 console.log(lngLat);
-                var temp = data.currently.temperature;
+                var temp = parseInt(data.currently.temperature);
                 var rain = data.currently.precipProbability;
-                var min = data.daily.data[0].temperatureMin;
-                var max = data.daily.data[0].temperatureMax;
-                var template = "<div class='col-sm-3 well'><h5>Temp.<span>" + temp +"<span></h5><hr /><p>Min:<span>" + min + "</span></p><hr /><p>Max:<span>" + max + "</span></p><hr /><h4><span>" + city + "," + state + "</span></h4><h4>Rain% :<span>" + rain + "</span></h4><span class = 'glyphicon glyphicon-remove' id = 'remove'></span></div>";
+                var min = parseInt(data.daily.data[0].temperatureMin);
+                var max = parseInt(data.daily.data[0].temperatureMax);
+                var template = "<div class='col-sm-3 well delete'><h5>Temp.<span>" + temp + "<span></h5><hr /><p>Min:<span>" + min + "</span></p><hr /><p>Max:<span>" + max + "</span></p><hr /><h4><span>" + city + "," + state + "</span></h4><h4>Rain% :<span>" + rain + "</span></h4><span class ='delTemplate glyphicon glyphicon-remove'></span></div>";
                 $("#populate").prepend(template);
-
+                $(".delTemplate").click(function () {  //Idk why this needs in this function 
+                    $(this).parent().remove();
+                });
+                //I added a nonfuntional delete button to the template above
             });
+
         });
     });
+    $("#deleteButton").click(function () {
+        $(".delete").remove();
+    });
+    // $(".delTemplate").click(function () {
+    //     $(this).parent().remove();
+    // });
 });
 
-// $("#remove").click("#populate", function(ev){
-//     $(ev.target).parent().fadeOut();
 
-// });
-
-// I call this outside of the function so the information processes in order
-// var getInfo = function (lngLat) {
-//     var darkSkyKey = "96f02ad95bc782facd7335190cb87a0a";
-//     $.ajax("https://api.darksky.net/forecast/" + darkSkyKey + "/" + lngLat, { dataType: "jsonp" }).done(function (data) {
-//         console.log(lngLat);
-//         var temp = data.currently.temperature;
-//         var rain = data.currently.precipProbability;
-//         var min = data.daily.data[0].temperatureMin;
-//         var max = data.daily.data[0].temperatureMax;
-//         $(".temp").append("<span>" + temp + "</span>");
-//         $(".rain").append("<span>" + rain + "</span>");
-//         $(".min").append("<span>" + min + "</span>");
-//         $(".max").append("<span>" + max + "</span>");
-//     });
-// }

@@ -14,27 +14,24 @@
     </head>
 
     <body class="container-fluid">
-                <!--<nav class="navbar">
-            <ul>
-                <li>Change Page Background</li>
-                <li>How to add more Weather Pages</li>              useless nav bar
-            </ul>
-        </nav>-->
-
+        <!--nav links-->
+        <nav class = "navRight"><a href = "https://darksky.net/dev/docs">Dark Sky API</a></nav>
         <!--Holds all the wells and pushes it off the top-->
         <div class="container topMargin"> 
 
-            <!--Holds the first row-->                          
-            <div class="row" id = "populate">    
+            <!--Populating div and button well-->                          
+            <div class="row" id = "populate">
+
                                 <!--Button that decides where the next card will be-->                    
-                <div class= "col-sm-3 well">
+                <div class= "col-sm-3 well">                     
                     <form> <!--If you wrap them in the form you don't have to link up the inputs-->
                     <span id="add" class="glyphicon glyphicon-plus glf"></span> <!--The id is used for a jQuery call-->
                     <input type="text" placeholder="Location" id="enterzip" class="pushRight" >
                     </form>
+                    <span class=" glyphicon glyphicon-remove" id="deleteButton"> Remove all</span>
                 </div>
 
-                <!--BEFORE TEMP-->
+                <!--BEFORE TEMP doesn't have all the elements needed, don't use as template till updated-->
                 <!--"<div class='col-sm-3 well'>
                     <h5>Temp.<span><span></h5>
                     <hr />
@@ -44,10 +41,21 @@
                     <hr />
                     <h3><span></span></h3>
                     <h4>Rain% :<span></span></h4>
-                    <span class = 'glyphicon glyphicon-remove' id = 'remove'></span>      not in after yet and commeted out in js
                 </div>"-->
 
                 <!--AFTER TEMP-->
+                <!--"<div class='col-sm-3 well'>
+                    <h5>Temp.<span>" + temp +"<span></h5>
+                    <hr />
+                    <p>Min:<span>" + min + "</span></p>
+                    <hr />
+                    <p>Max:<span>" + max + "</span></p>
+                    <hr />
+                    <h4><span>" + city + "," + state + "</span></h4>
+                    <h4>Rain% :<span>" + rain + "</span></h4>
+                    </div>"-->
+
+                    <!--In javascript-->
                     <!--"<div class='col-sm-3 well'><h5>Temp.<span>" + temp +"<span></h5><hr /><p>Min:<span>" + min + "</span></p><hr /><p>Max:<span>" + max + "</span></p><hr /><h4><span>" + city + "," + state + "</span></h4><h4>Rain% :<span>" + rain + "</span></h4></div>"-->
 
             </div>
